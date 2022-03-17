@@ -1,4 +1,4 @@
-setwd("/Users/Amy/Documents/git-usage/data")
+setwd("/Users/Amy/Documents/git-usage")
 
 melb_df <- read.table(
   file = "melbourne.csv",
