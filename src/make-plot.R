@@ -1,5 +1,7 @@
 library(ggplot2)
 
+setwd("/Users/Amy/Documents/git-usage")
+
 plot_df <- read.csv("average-rainfall.csv")
 
 g <- ggplot(
@@ -22,7 +24,15 @@ g <- ggplot(
   theme_classic() +
   theme(axis.text.x = element_text(angle = -45))
 
-ggsave(filename = "result.png",
+ggsave(filename = "out/result.png",
        plot = g,
        height = 10.5, width = 14.8,
        units = "cm")
+
+sink(file = "git-usage/out/regression.summary.txt")
+sessionInfo()
+sink()
+
+sink(file = "git-usage/out/result.png")
+sessionInfo()
+sink()
